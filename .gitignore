@@ -1,32 +1,84 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
+############################
+# Go build artifacts
+############################
+bin/
+build/
+dist/
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
-
-# Test binary, built with `go test -c`
 *.test
-
-# Code coverage profiles and other test artifacts
 *.out
-coverage.*
-*.coverprofile
-profile.cov
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
-
-# Go workspace file
+############################
+# Go workspace / modules
+############################
+vendor/
 go.work
 go.work.sum
 
-# env file
+############################
+# Environment variables
+############################
 .env
+.env.*
+!.env.example
 
-# Editor/IDE
-# .idea/
-# .vscode/
+############################
+# Logs
+############################
+*.log
+logs/
+
+############################
+# Uploads / temp files
+############################
+uploads/
+upload/
+tmp/
+temp/
+
+############################
+# IDE / Editor files
+############################
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+############################
+# OS files
+############################
+.DS_Store
+Thumbs.db
+
+############################
+# Test & coverage
+############################
+coverage.out
+coverage/
+*.cover
+
+############################
+# Debug
+############################
+__debug_bin
+
+arweave_keyfile.json
+
+contractABI.json
+
+main
+
+deploy.sh
+
+default.conf
+
+data/
+
+internal/config.yaml
+
+config.yaml
